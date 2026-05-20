@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+# 🔐 TrustFund Escrow — Decentralized Escrow Payment DApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A Web3-powered escrow platform built on Ethereum that enables trustless, transparent payments between buyers and sellers — without any middlemen.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌐 Live Demo
 
-### `npm start`
+> Deployed on Sepolia Testnet  
+> Connect MetaMask to interact with real smart contracts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Screenshots
 
-### `npm test`
+> *(Add your screenshots here)*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📖 Description
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**TrustFund Escrow** is a decentralized application (DApp) that allows buyers and sellers to transact securely using Ethereum smart contracts. Instead of trusting a third party with your funds, the smart contract holds the ETH until the buyer confirms delivery — only then are funds released to the seller.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If the buyer is unsatisfied, they can trigger a full refund directly from the app. Every transaction is recorded permanently on the Ethereum blockchain, ensuring complete transparency and security.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Built with **React.js** on the frontend and **Solidity** smart contracts deployed on the **Sepolia testnet**.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ✨ Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 🦊 **MetaMask Wallet Integration** — Connect your wallet in one click
+- 🟢 **Live Network Detection** — Warns if you're on the wrong network and lets you switch to Sepolia instantly
+- 🔐 **Create Escrow Contracts** — Deploy a new escrow smart contract with seller address and ETH amount
+- ✅ **Approve Payment** — Release locked ETH to the seller after confirming delivery
+- ↩️ **Refund Buyer** — Return locked ETH to yourself if delivery is not satisfactory
+- 📋 **Copy Contract Address** — One-click copy of the deployed contract address after creation
+- 🔍 **Live Contract Status Checker** — Fetch real-time on-chain data from any escrow contract
+- 📊 **Transaction Dashboard** — View all your transactions with status badges (Pending / Approved / Refunded)
+- 💾 **Persistent Storage** — Transaction history saved to localStorage, survives page refreshes
+- 🗂️ **Stats Overview** — Live count of Total, Approved, Refunded, and Pending transactions
+- 🎨 **Beautiful UI** — Frosted glass design with purple-blue gradient theme
+- ✅ **Confirmation Modals** — Every critical action requires confirmation before executing
+- 📬 **Toast Notifications** — Success and error feedback after every action
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠️ Tech Stack
 
-## Learn More
+| Layer | Technology |
+|---|---|
+| Frontend | React.js, CSS3 |
+| Blockchain | Ethereum (Solidity ^0.8.22) |
+| Web3 Library | ethers.js v6 |
+| Wallet | MetaMask |
+| Network | Sepolia Testnet |
+| Styling | Inline styles + CSS (Poppins font) |
+| Storage | localStorage (transaction persistence) |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Getting Started
 
-### Code Splitting
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Node.js](https://nodejs.org/) v16 or higher
+- [MetaMask](https://metamask.io/) browser extension
+- Sepolia testnet ETH (get from [Sepolia Faucet](https://sepoliafaucet.com/))
 
-### Analyzing the Bundle Size
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/trustfund-escrow.git
 
-### Making a Progressive Web App
+# 2. Navigate into the project
+cd trustfund-escrow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 3. Install dependencies
+npm install
 
-### Advanced Configuration
+# 4. Start the development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The app will open at `http://localhost:3000`
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔧 How to Use
 
-### `npm run build` fails to minify
+### 1. Connect Wallet
+- Click **Connect Wallet** in the navbar
+- Approve the MetaMask popup
+- Make sure you are on the **Sepolia** testnet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 2. Create an Escrow
+- Fill in the **Seller Name**, **Seller Wallet Address**, and **Amount (ETH)**
+- Click **🚀 Create Escrow**
+- Confirm the transaction in MetaMask
+- The deployed **Contract Address** appears — copy it for later
+
+### 3. Approve or Refund
+- Paste the contract address in the **Approve or Refund** panel
+- Click **✅ Approve** to release ETH to the seller
+- Click **↩️ Refund** to return ETH to yourself
+- Confirm in MetaMask — status updates instantly in the table
+
+### 4. Check Any Contract
+- Use the **🔍 Live Contract Status Checker**
+- Paste any escrow contract address
+- View real-time balance, buyer, seller, and status on-chain
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── Components/
+│   ├── NavbarWithSections.jsx   # Navbar + Hero + How It Works + Features + Roles
+│   ├── EscrowPage.js            # Main dashboard (Create + Approve/Refund + History)
+│   ├── EscrowActions.js         # (Legacy) Create escrow form
+│   ├── EscrowInteract.js        # (Legacy) Approve/refund panel
+│   ├── ConnectWallet.js         # Wallet connection component
+│   └── TransactionHistory.js   # Transaction table component
+├── Contracts/
+│   ├── Config.js                # Contract ABI + Bytecode config
+│   └── TrustFundEscrow.json    # Compiled contract artifact
+├── App.js                       # Root component
+└── App.css                      # Global styles
+```
+
+---
+
+## 📜 Smart Contract
+
+The escrow smart contract is written in **Solidity ^0.8.22** and deployed on the **Sepolia testnet**.
+
+### Key Functions
+
+| Function | Description |
+|---|---|
+| `constructor(address _seller)` | Deploys contract, sets buyer, seller, locks ETH |
+| `approvePayment()` | Buyer releases ETH to seller |
+| `refundBuyer()` | Buyer reclaims locked ETH |
+| `getBalance()` | Returns current contract ETH balance |
+| `isApproved()` | Returns whether payment was approved |
+| `isRefunded()` | Returns whether refund was issued |
+
+### Security Features
+- ✅ Only the **buyer** can approve or refund
+- ✅ **Reentrancy protection** — transaction marked before transfer
+- ✅ **One-time execution** — cannot approve and refund the same contract
+
+---
+
+## ⚙️ Environment
+
+This project runs on the **Sepolia Ethereum testnet**. No real ETH is used.
+
+Get free Sepolia ETH from:
+- https://sepoliafaucet.com/
+- https://faucet.sepolia.dev/
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+```bash
+# Fork the repo, then:
+git checkout -b feature/your-feature-name
+git commit -m "Add your feature"
+git push origin feature/your-feature-name
+# Open a Pull Request
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
+
+**Your Name**  
+- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)  
+- LinkedIn: [Your LinkedIn](https://linkedin.com)
+
+---
+
+## ⭐ Show Your Support
+
+If you found this project helpful, please give it a **⭐ star** on GitHub — it means a lot!
+
+---
+
+> Built with ❤️ using React.js + Ethereum + MetaMask
