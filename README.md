@@ -198,7 +198,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Your Name**  
 - GitHub: (https://github.com/aayusha-j)  
-- LinkedIn:(https://linkedin.com)
+- LinkedIn: (https://www.linkedin.com/in/aayusha-jagtap-2754a9327?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 
 ---
 
